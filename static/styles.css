@@ -1,0 +1,425 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #23243c);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for Centering Content */
+.container {
+    max-width: 500px; /* Increased the width */
+    background: rgba(0, 0, 0, 0.85); /* Slightly darker background for better contrast */
+    padding: 40px; /* Added more padding */
+    border-radius: 15px; /* Slightly rounder corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Larger shadow for better depth */
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Logo Styles */
+.logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add space below the logo */
+}
+
+/* Headings */
+h1 {
+    font-size: 28px; /* Increased font size */
+    margin-bottom: 30px; /* Added more spacing below heading */
+    text-transform: uppercase; /* Capitalize all letters for impact */
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased gap between inputs */
+}
+
+/* Input Fields */
+input[type="email"], input[type="password"] {
+    width: 100%; /* Full width of the container */
+    padding: 15px; /* Increased padding */
+    font-size: 16px; /* Increased font size */
+    border: 1px solid #007bff; /* Border for better visibility */
+    border-radius: 8px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    color: white; /* White text for contrast */
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #0056b3; /* Change border color on focus */
+    box-shadow: 0 0 10px rgba(0, 91, 179, 0.5); /* Add glow effect */
+}
+
+/* Login Button */
+button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 15px; /* Increased padding */
+    font-size: 18px; /* Larger font size */
+    font-weight: bold;
+    border: none;
+    border-radius: 10px; /* Rounded button */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    background: linear-gradient(135deg, #0056b3, #003b82);
+}
+
+button:active {
+    transform: scale(1.02);
+}
+
+/* Button Menu */
+#button-menu {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 20px; /* Add space between buttons */
+    align-items: center; /* Center buttons horizontally */
+    margin-top: 30px; /* Add space above the menu */
+}
+
+/* Buttons */
+#button-menu button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 15px; /* Increased padding for a larger button size */
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 90%; /* Adjust button width */
+    max-width: 300px; /* Set maximum width for consistency */
+}
+
+#button-menu button:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    background: linear-gradient(135deg, #0056b3, #003b82);
+}
+
+#button-menu button:active {
+    transform: scale(1.02);
+}
+
+/* Game Section */
+#game-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+/* Timer */
+#timer {
+    font-size: 20px;
+    color: #ffcc00;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Question Text */
+#question-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Options Section */
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Custom Progress Bar Styles */
+.progress-container {
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 25px;
+  background-color: #444;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #28a745; /* Default for Cyber Security */
+}
+
+#hk-fill {
+  background-color: #dc3545;
+}
+
+.progress-indicator {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 25px; /* Fixed square dimensions */
+  /* Center horizontally relative to the indicator */
+  transform: translateX(-50%);
+}
+
+/* End Game Buttons */
+#end-game-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Study Mode Section */
+#study-mode-section {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Flashcard */
+#flashcard {
+    width: 300px;
+    height: 200px;
+    margin: 20px auto;
+    perspective: 1000px;
+}
+
+.flashcard-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.flashcard-inner:hover {
+    transform: rotateY(180deg);
+}
+
+.flashcard-front, .flashcard-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flashcard-front {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.flashcard-back {
+    background: linear-gradient(135deg, #28a745, #1e8e3e);
+    color: white;
+    font-size: 16px;
+    transform: rotateY(180deg);
+}
+
+/* Navigation Buttons */
+#prev-flashcard-btn, #next-flashcard-btn, #exit-study-mode-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#prev-flashcard-btn:hover, #next-flashcard-btn:hover, #exit-study-mode-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Leaderboard Section */
+#leaderboard-section {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#leaderboard {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#leaderboard li {
+    font-size: 18px;
+    margin: 8px 0;
+    color: #b8e986;
+}
+
+#progress-section span {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Flashcard Styles for Study Mode */
+#flashcard {
+  width: 300px;
+  height: 200px;
+  margin: 20px auto;
+  perspective: 1000px;
+}
+.flashcard-inner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+.flashcard-inner.flipped {
+  transform: rotateY(180deg);
+}
+.flashcard-front, .flashcard-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 10px;
+}
+.flashcard-front {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.flashcard-back {
+  background: linear-gradient(135deg, #28a745, #1e8e3e);
+  color: white;
+  font-size: 1rem;
+  transform: rotateY(180deg);
+}
+
+
+/* Main Menu Button (in game section) */
+#main-menu-btn {
+  position: fixed;        /* Fixed relative to the viewport */
+  top: 10px;              /* 10px from the top of the screen */
+  right: 10px;            /* 10px from the right edge */
+  width: 100px;            /* Narrow width for a square appearance */
+  height: 80px;           /* Increased height to make it square */
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;          /* Ensure it appears on top of other elements */
+}
+
+/* Fireworks Animation */
+#fireworks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2000;
+  display: none;
+}
+.firework {
+  position: absolute;
+  background: radial-gradient(circle, #ff0 0%, transparent 70%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: explode 1s ease-out forwards;
+}
+@keyframes explode {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+
+/* Error Message Animation */
+#error-msg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  z-index: 2000;
+  display: none;
+}
+@keyframes shake {
+  0% { transform: translate(-50%, -50%) translateX(0); }
+  20% { transform: translate(-50%, -50%) translateX(-10px); }
+  40% { transform: translate(-50%, -50%) translateX(10px); }
+  60% { transform: translate(-50%, -50%) translateX(-10px); }
+  80% { transform: translate(-50%, -50%) translateX(10px); }
+  100% { transform: translate(-50%, -50%) translateX(0); }
+}
+.shake {
+  animation: shake 0.5s;
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
