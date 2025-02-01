@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 import sqlite3
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import quote as url_quote, generate_password_hash, check_password_hash
 from datetime import datetime
 
 app = Flask(__name__)
