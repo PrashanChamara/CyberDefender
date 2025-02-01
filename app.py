@@ -3,6 +3,9 @@ import sqlite3
 from werkzeug.security import quote as url_quote, generate_password_hash, check_password_hash
 from datetime import datetime
 
+print("Flask Version:", flask.__version__)
+print("Werkzeug Version:", werkzeug.__version__)
+
 app = Flask(__name__)
 
 def connect_db():
